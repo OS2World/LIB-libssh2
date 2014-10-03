@@ -1,0 +1,29 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: libssh2-1.4.0.zip
+       Short Description: libssh2 v1.4.0 for OS/2
+        Long Description: libssh2 v1.4.0 for OS/2
+libssh2 is a library implementing the SSH2 protocol, available under
+the revised BSD license.
+
+      Proposed directory
+           for placement: /pub/os2/dev/util
+
+               Your name: KO Myung-Hun
+           Email address: komh@chollian.net
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: (none) 
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: 
+ Additional requirements: kLIBC v0.6.4, OpenSSL v0.9.8r
+
+                Replaces: (none)
+
+
+

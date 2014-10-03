@@ -1,0 +1,26 @@
+diff -uNr  example/direct_tcpip.c.org example/direct_tcpip.c
+--- example/direct_tcpip.c.org	2011-09-11 22:27:40.000000000 +0900
++++ example/direct_tcpip.c	2012-02-12 21:18:30.000000000 +0900
+@@ -23,6 +23,10 @@
+ #include <sys/select.h>
+ #endif
+ 
++#ifdef __OS2__
++typedef int socklen_t;
++#endif
++
+ #ifndef INADDR_NONE
+ #define INADDR_NONE (in_addr_t)-1
+ #endif
+diff -uNr  example/Makefile.am.org example/Makefile.am
+--- example/Makefile.am.org	2011-09-11 22:27:40.000000000 +0900
++++ example/Makefile.am	2012-02-12 21:41:02.000000000 +0900
+@@ -7,7 +7,7 @@
+  scp_write_nonblock sftp sftp_nonblock sftp_write sftp_write_nonblock	\
+  sftp_mkdir sftp_mkdir_nonblock sftp_RW_nonblock sftp_write_sliding	\
+  sftpdir sftpdir_nonblock ssh2_exec ssh2_agent ssh2_echo sftp_append	\
+- subsystem_netconf x11
++ subsystem_netconf
+ 
+ AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_builddir)/example
+ LDADD = $(top_builddir)/src/libssh2.la
